@@ -5,7 +5,7 @@ const url = require('url');
 const ref = req.headers.get('referer') 
 const path = url.parse(req.url).path;
 
- if(ref.includes("facebook.com"))
+ if(ref && ref.includes("facebook.com"))
      {
       return NextResponse.redirect('https://mretg.com'+path)
      } 
